@@ -1,0 +1,389 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+ */
+
+body {
+  margin: 0;
+}
+
+
+
+/*------- Header ------*/
+
+.custom-link {
+  color: inherit; /* Set the link color to the parent's color */
+  text-decoration: none; /* Remove the underline */
+}
+
+.header--main {
+  height: 64px;
+  background-color: #131921;
+  color: #d6d6d6;
+  display: flex;
+  align-items: center;
+  top: 0;
+  position: sticky;
+  width: 100%;
+  z-index: 100;
+}
+
+.header--logo {
+  width: 100px;
+  margin: 0 20px;
+  margin-top: 16px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.header--search {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.header--search--input {
+  height: 34px;
+  width: 100%;
+  border-style: none;
+  border-radius: 4px 0 0 4px;
+  width: 100%;
+}
+.header--search--input::placeholder {
+  padding: 10px;
+}
+
+.header--search--icon {
+  color: black;
+  padding: 6px;
+  border-radius: 0 4px 4px 0;
+  background-color: #cd9042;
+}
+
+.header--right {
+  display: flex;
+  gap: 16px;
+  width: 280px;
+  padding-left: 16px;
+  margin-right: none;
+}
+
+.header--rr {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header--rr:hover {
+  text-decoration: underline;
+}
+
+.header--rr--one {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.header--rr--two {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.header--rr--cart {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.header--rr--cart:hover {
+  text-decoration: underline;
+}
+
+.cart--count {
+  font-size: 12px;
+  position: absolute;
+  left: 16px;
+  top: -4px;
+  color: black;
+  background-color: #cd9042;
+  border-radius: 100%;
+  padding: 2px 4px;
+}
+
+.cart--text {
+  position: absolute;
+  left: 20px;
+  font-weight: 700;
+}
+
+/* -----Header2----- */
+
+.header2--main {
+  display: flex;
+  /* flex-wrap: nowrap; */
+  background-color: #232f3e;
+  color: #d6d6d6;
+  align-items: center;
+  gap: 2px;
+  box-sizing: border-box;
+  padding: 5px;
+  height: 40px;
+  font-weight: 600;
+  padding-left: 16px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .header2--list .rm {
+    /* overflow-x: scroll; */
+    display: none;
+  }
+}
+@media only screen and (max-width: 1157px) {
+  .header2--list .rm-2 {
+    /* overflow-x: scroll; */
+    display: none;
+  }
+}
+@media only screen and (max-width: 1040px) {
+  .header2--list .rm-3 {
+    /* overflow-x: scroll; */
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .header2--list .rm-4 {
+    /* overflow-x: scroll; */
+    display: none;
+  }
+}
+@media only screen and (max-width: 705px){
+  .header2--list .rm-5 {
+    /* overflow-x: scroll; */
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px){
+  .header2--list .rm-6 {
+    /* overflow-x: scroll; */
+    display: none;
+  }
+}
+
+/* 
+.list--content{
+  width: 8.3%;
+} */
+
+.list--content:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.header2--list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  margin: 0px;
+  letter-spacing: -0.1px;
+}
+
+/* -------Footer------- */
+
+.footer--main {
+  width: 100%;
+  background-color: #0d1017;
+  color: #d6d6d6;
+  display: block;
+}
+
+.footer--upper {
+  width: 95%;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  padding: 30px 10px;
+  /* box-sizing: border-box; */
+  justify-content: center;
+}
+
+.footer--heading {
+  width: 25%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.footer--lower {
+  display: flex;
+  justify-content: center;
+}
+
+.footer--list {
+  list-style: none;
+  padding-left: 0;
+}
+.footer--list--items {
+  margin: 10px 0;
+  height: 25px;
+  cursor: pointer;
+}
+.footer--list--items:hover {
+  text-decoration: underline;
+}
+
+.footer--heading h2 {
+  text-shadow: 0 0 5px orange, 0 0 15px orange, 0 0 20px orange, 0 0 40px orange,
+    0 0 60px red, 0 0 10px #ff8d00, 0 0 98px red;
+  color: #fff6a9;
+  font-family: Sacramento, cursive;
+  text-align: center;
+  animation: blink 5s infinite;
+  -webkit-animation: blink 5s infinite;
+  font-size: 20px;
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px #ff9800, 0 0 15px #ff9800, 0 0 20px #ff9800,
+      0 0 40px #ff9800, 0 0 60px red, 0 0 10px #ff8d00, 0 0 98px red;
+    color: #fff6a9;
+  }
+}
+
+/* ------center------- */
+
+.center--main {
+  height: 1800px;
+}
+
+.center--amazon--img {
+  width: 100%;
+  z-index: -1;
+  margin-bottom: -150px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
+/*------- SignIn--------*/
+
+.signin--main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.signin--logo {
+  width: 100px;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+
+.signin--card{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 300px;
+  border: 1px solid #dddcdc;
+  border-radius: 6px;
+  padding: 0px 26px;
+}
+
+.signin--card h1{
+  font-weight: 400;
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.signin--card > form > h5{
+  margin-bottom: 5px;
+}
+
+.signin--card >form >input{
+  width: 97%;
+
+  height: 25px;
+  border:1px solid lightgray;
+  border-radius: 2px;
+}
+
+.signin--button{
+  margin-top: 16px;
+  background-color: #FFD700;
+  width: 99%;
+  height: 30px;
+  border-radius: 4px;
+  border-style: none;
+}
+
+.signin--button:hover{
+  cursor: pointer;
+  background-color: #fbcc3f;
+}
+
+.signin--card > p{
+  font-size: 12px;
+  font-weight: 500;
+}
+.signin--card > .custom-link> p{
+  font-size: 13px;
+  font-weight: 500;
+  color: #0066c0;
+}
+
+.dash{
+  border-top: 1px solid #e7e7e7;
+  margin: 10px 0;
+}
+.signin--card--bottom{
+  padding-top: 10px;
+  padding-bottom: 28px;
+}
+
+.signin--card--bottom h6{
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -.3px;
+}
+.signin--card--bottom > .top{
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.signin--card--bottom > .custom-link{
+  color: #0066c0
+}
