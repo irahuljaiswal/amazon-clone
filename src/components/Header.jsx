@@ -2,15 +2,19 @@ import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
+import { useStateValue } from "./StateProvider";
 
-export default function Header() {
+export default function Header( ) {
+  const [{basket}, dispatch] = useStateValue()
   return (
     <div className="header--main">
-      <img
-        className="header--logo"
-        src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
-        alt="amazon logo"
-      />
+      <Link to="/">
+        <img
+          className="header--logo"
+          src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+          alt="amazon logo"
+        />
+      </Link>
       <div className="header--search">
         <input
           className="header--search--input"
@@ -35,11 +39,13 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className="header--rr--cart">
-          <span className="cart--count">0</span>
-          <ShoppingCartOutlinedIcon className="header--cart--icon" />
-          <p className="cart--text">Cart</p>
-        </div>
+        <Link className="custom-link" to='/cart'>
+          <div className="header--rr--cart">
+            <span className="cart--count">{basket?.length}</span>
+            <ShoppingCartOutlinedIcon className="header--cart--icon" />
+            <p className="cart--text">Cart</p>
+          </div>
+        </Link>
       </div>
     </div>
   );

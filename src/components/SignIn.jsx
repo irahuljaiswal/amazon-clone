@@ -2,6 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function SignIn() {
+  const [data, setData] = React.useState({
+    email: "",
+    password: "",
+  });
+
+  console.log(data);
+
+  const addData = (e) => {
+    const { name, value } = e.target;
+
+    setData(() => {
+      return { 
+        ...data,
+        [name]: value };
+    });
+  };
+
   return (
     <div className="signin--main">
       <Link to="/">
@@ -15,10 +32,10 @@ export default function SignIn() {
         <h1 signin--heading>Sign in</h1>
         <form action="">
           <h5>Email</h5>
-          <input type="text" />
+          <input type="text" name="email" onChange={addData} />
 
           <h5>Password</h5>
-          <input type="password" />
+          <input type="password" name="password" onChange={addData} />
           <button className="signin--button">Sign in</button>
         </form>
         <p>
@@ -43,6 +60,12 @@ export default function SignIn() {
             <h6>Shop on Amazon Business</h6>
           </Link>
         </div>
+      </div>
+      <div className="sign--in--newuser">
+        <p className="dashed">New to Amazon?</p>
+        <Link to="/signup" className=" custom-link sign--in--newuser">
+          <button className="create--acc">Create your Amazon account</button>
+        </Link>
       </div>
     </div>
   );
