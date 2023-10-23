@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="footer--upper">
         <div className="footer--heading">
           <h2>Rahul's Ecommerce</h2>
-          <p>
+          <p className = "fs-12">
             Buy all your favorite items here and get it delieverd within 2 days
             at your door step
           </p>
@@ -16,17 +16,17 @@ export default function Footer() {
           <h3 className="footer--list--heading">Quick Links</h3>
           <ul className="footer--list">
             <Link className="custom-link" onClick="k">
-              <li className="footer--list--items">Home</li>
+              <li className="footer--list--items fs-12">Home</li>
             </Link>
-            <Link className="custom-link" to='/cart'>
-              <li className="footer--list--items">Cart</li>
+            <Link className="custom-link" to="/cart">
+              <li className="footer--list--items fs-12">Cart</li>
             </Link>
-            <Link className="custom-link" to='/orders'>
-              <li className="footer--list--items">Orders</li>
+            <Link className="custom-link" to="/orders">
+              <li className="footer--list--items fs-12">Orders</li>
             </Link>
           </ul>
         </div>
-        <div className="footer--heading">
+        <div className="footer--heading rm-5">
           <h3 className="footer--list--heading">Connect with me</h3>
           <ul className="footer--list">
             <Link
@@ -41,9 +41,9 @@ export default function Footer() {
         <div className="footer--heading">
           <h3 className="footer--list--heading">Contact me</h3>
           <ul className="footer--list">
-            <li className="footer--list--items">rj82890@gmail.com</li>
-            <li className="footer--list--items">+91 1234567890</li>
-            <li className="footer--list--items">no-reply@amazon.com</li>
+            <li className="footer--list--items fs-12">rj82890@gmail.com</li>
+            <li className="footer--list--items fs-12">+91 1234567890</li>
+            <li className="footer--list--items fs-12">no-reply@amazon.com</li>
           </ul>
         </div>
       </div>

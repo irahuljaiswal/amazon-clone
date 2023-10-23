@@ -169,9 +169,12 @@ body {
   }
 }
 @media only screen and (max-width: 705px) {
-  .header2--list .rm-5 {
+  .rm-5 {
     /* overflow-x: scroll; */
     display: none;
+  }
+  .fs-12{
+    font-size: 12px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -434,8 +437,8 @@ body {
 
 /* ---------Product--------- */
 
-.center--main {
-}
+/* .center--main {
+} */
 
 .product {
   background-color: white;
@@ -472,9 +475,9 @@ body {
 
 }
 
-@media only screen and (max-width:900px){
+@media only screen and (max-width:800px){
   .pro1{
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
   }
 }
 
@@ -523,7 +526,7 @@ body {
 .cart--main {
   display: flex;
   background-color: #eaeded;
-  height:auto;
+  min-height:60vh;
   padding: 30px;
   gap: 20px;
 }
@@ -606,4 +609,10 @@ body {
   border-style: none;
   cursor: pointer;
   height: 24px;
+}
+
+/* ----------orders------------ */
+
+.orders--main{
+  min-height: 70vh;
 }
